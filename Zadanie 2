@@ -1,0 +1,96 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
+int i;
+int c;
+int il = 0;
+string a;
+string b = "asdfghjkllkjhgfdsa";
+char g ='a';
+
+
+class ch{
+
+public:
+
+void w()
+{
+    ifstream plik1;
+    plik1.open("Nowy dokument tekstowy.txt");
+    if(plik1.good())
+     while(!plik1.eof())
+                         {
+                         plik1>>b;
+
+                         }
+    plik1.close();
+
+}
+
+
+void z()
+{
+     ofstream plik2;
+    plik2.open("Nowy dokument tekstowy2.txt");
+            plik2<<il;
+    plik2.close();
+}
+
+void liczenie()
+{
+    for(int i=0; i<b.length(); i++)
+    {
+        if(b.at(i) == g)
+        il++;
+    }
+
+
+
+
+    cout<<b<<endl;
+    cout<<"Litera: "<<g<<endl;
+    cout<<"Występuje "  <<il<< " razy";
+}
+
+
+void m(){
+
+    char litera;
+cin>>litera;
+
+
+
+while(litera!=0)
+{
+    if(litera>95)
+
+        cout<<(char)(litera-32);
+
+
+    else
+
+        cout<<litera;
+
+        cin>>litera;
+}}
+};
+
+int main()
+{
+    ch t1;
+
+    t1.w();
+
+    t1.liczenie();
+
+    t1.z();
+
+    t1.m();
+
+
+    return 0;
+
+}
